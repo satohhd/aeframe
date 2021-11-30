@@ -1,0 +1,2 @@
+dotnet aspnet-codegenerator controller -name NumberingController -async -api -m Numbering -dc ApplicationDbContext -outDir Controllers
+
