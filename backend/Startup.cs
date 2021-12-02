@@ -73,7 +73,8 @@ namespace backend
             services.AddDbContext<ApplicationDbContext>(options => 
             {
                        options.EnableSensitiveDataLogging();
-                       options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection"));
+                    //    options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection"));
+                       options.UseSqlite("Data Source=MyDb.db");
             });
             services.AddDatabaseDeveloperPageExceptionFilter();
             services.AddDefaultIdentity<Account>(options => options.SignIn.RequireConfirmedAccount = false)
